@@ -28,7 +28,7 @@ export default function App() {
   };
 
   const { data, isLoading, isError, isSuccess } = useQuery({
-    queryKey: [movies, currentPage],
+    queryKey: ["movies", movies, currentPage],
     queryFn: () => fetchMovies(movies, currentPage),
     enabled: !!movies,
     placeholderData: keepPreviousData,
